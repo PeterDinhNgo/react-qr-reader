@@ -193,7 +193,7 @@ module.exports = class Reader extends Component {
       stream.getTracks().forEach(track => {
         stream.removeTrack(track);
         track.stop();
-      )};
+      });
     }
 
     preview.addEventListener('loadstart', this.handleLoadStart)
