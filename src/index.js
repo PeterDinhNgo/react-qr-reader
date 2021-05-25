@@ -191,9 +191,9 @@ module.exports = class Reader extends Component {
     // Assign `stopCamera` so the track can be stopped once component is cleared
     this.stopCamera = () => {
       preview.srcObject = null;
-      stream.getTracks().forEach(track => {
-        track.stop();
-      });
+      setTimeout(() => {
+        streamTrack.stop();
+      }, 2000);
     }
 
     preview.addEventListener('loadstart', this.handleLoadStart)
